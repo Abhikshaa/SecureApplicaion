@@ -11,11 +11,12 @@ public class LeadDto {
 
     private  long id;
 @NotEmpty
-@Size(min=7,max = 14,message = "character should be 14")
+@Size(min=4,max = 50,message = "character should be 14")
     private String name;
 @NotEmpty
-@Size(min=12,max = 16,message = "character should be 16")
+@Size(min=3,max = 50,message = "character should be 16")
     private String email;
 
     private long mobile;
+    private String password;
 }

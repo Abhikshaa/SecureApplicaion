@@ -24,4 +24,5 @@ public class Lead {
     private String email;
     @Column(name="mobile",nullable = false)
     private long mobile;
+    private  String password;
 }

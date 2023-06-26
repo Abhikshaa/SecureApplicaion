@@ -1,0 +1,94 @@
+2023-06-26 00:01:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-26 00:01:46 INFO  c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2023-06-26 00:01:46 INFO  c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+2023-06-26 00:02:41 INFO  c.b.MyblenderApplication:55 - Starting MyblenderApplication using Java 1.8.0_202 on DESKTOP-AHA0O5J with PID 9680 (C:\Intellij Project\blender\myblender\target\classes started by CSC in C:\Intellij Project\blender\myblender)
+2023-06-26 00:02:41 INFO  c.b.MyblenderApplication:631 - No active profile set, falling back to 1 default profile: "default"
+2023-06-26 00:02:42 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-26 00:02:42 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-26 00:02:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-26 00:02:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate:201 - Finished Spring Data repository scanning in 234 ms. Found 1 JPA repository interfaces.
+2023-06-26 00:02:52 INFO  o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-06-26 00:02:52 INFO  o.a.c.c.StandardService:173 - Starting service [Tomcat]
+2023-06-26 00:02:52 INFO  o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-26 00:02:53 INFO  o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+2023-06-26 00:02:53 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:292 - Root WebApplicationContext: initialization completed in 10944 ms
+2023-06-26 00:02:54 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-26 00:02:54 INFO  o.h.Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-06-26 00:02:55 INFO  o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-26 00:02:56 INFO  c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+2023-06-26 00:02:57 INFO  c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+2023-06-26 00:02:57 INFO  o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-06-26 00:03:01 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-26 00:03:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-26 00:03:02 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:223 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-26 00:03:04 WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration:89 - 
+
+Using generated security password: ed3e1835-307d-4ef5-8424-9dd92fffba2d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-06-26 00:03:05 INFO  o.s.s.w.DefaultSecurityFilterChain:55 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38c83740, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3629f256, org.springframework.security.web.context.SecurityContextPersistenceFilter@633c868b, org.springframework.security.web.header.HeaderWriterFilter@3df2ec5c, org.springframework.security.web.authentication.logout.LogoutFilter@1b784ccf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@f71f037, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f5c51b4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@174f8919, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f4a73ff, org.springframework.security.web.session.SessionManagementFilter@69b1dc48, org.springframework.security.web.access.ExceptionTranslationFilter@4f252e55, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79d05bb6]
+2023-06-26 00:03:08 INFO  o.s.b.d.a.OptionalLiveReloadServer:59 - LiveReload server is running on port 35729
+2023-06-26 00:03:08 INFO  o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-26 00:03:08 INFO  c.b.MyblenderApplication:61 - Started MyblenderApplication in 28.82 seconds (JVM running for 32.059)
+2023-06-26 00:03:18 INFO  o.a.c.c.C.[.[.[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-26 00:03:18 INFO  o.s.w.s.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2023-06-26 00:03:18 INFO  o.s.w.s.DispatcherServlet:547 - Completed initialization in 16 ms
+2023-06-26 00:05:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-26 00:05:50 INFO  c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2023-06-26 00:05:50 INFO  c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+2023-06-26 00:06:15 INFO  c.b.MyblenderApplication:55 - Starting MyblenderApplication using Java 1.8.0_202 on DESKTOP-AHA0O5J with PID 9048 (C:\Intellij Project\blender\myblender\target\classes started by CSC in C:\Intellij Project\blender\myblender)
+2023-06-26 00:06:15 INFO  c.b.MyblenderApplication:631 - No active profile set, falling back to 1 default profile: "default"
+2023-06-26 00:06:15 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-26 00:06:15 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-26 00:06:19 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'student' defined in com.blender.MyblenderApplication: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=myblenderApplication; factoryMethodName=student; initMethodName=null; destroyMethodName=(inferred); defined in com.blender.MyblenderApplication] for bean 'student': There is already [Generic bean: class [com.blender.Security.Student]; scope=prototype; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Intellij Project\blender\myblender\target\classes\com\blender\Security\Student.class]] bound.
+2023-06-26 00:06:19 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-26 00:06:19 ERROR o.s.b.d.LoggingFailureAnalysisReporter:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'student', defined in com.blender.MyblenderApplication, could not be registered. A bean with that name has already been defined in file [C:\Intellij Project\blender\myblender\target\classes\com\blender\Security\Student.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-06-26 00:27:13 INFO  c.b.MyblenderApplication:55 - Starting MyblenderApplication using Java 1.8.0_202 on DESKTOP-AHA0O5J with PID 11028 (C:\Intellij Project\blender\myblender\target\classes started by CSC in C:\Intellij Project\blender\myblender)
+2023-06-26 00:27:13 INFO  c.b.MyblenderApplication:631 - No active profile set, falling back to 1 default profile: "default"
+2023-06-26 00:27:13 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-26 00:27:13 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-26 00:27:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-26 00:27:19 INFO  o.s.d.r.c.RepositoryConfigurationDelegate:201 - Finished Spring Data repository scanning in 240 ms. Found 1 JPA repository interfaces.
+2023-06-26 00:27:23 INFO  o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-06-26 00:27:23 INFO  o.a.c.c.StandardService:173 - Starting service [Tomcat]
+2023-06-26 00:27:23 INFO  o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-26 00:27:24 INFO  o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+2023-06-26 00:27:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:292 - Root WebApplicationContext: initialization completed in 10509 ms
+2023-06-26 00:27:25 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-26 00:27:25 INFO  o.h.Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-06-26 00:27:26 INFO  o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-26 00:27:27 INFO  c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+2023-06-26 00:27:28 INFO  c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+2023-06-26 00:27:28 INFO  o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-06-26 00:27:32 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-26 00:27:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-26 00:27:32 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:223 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-26 00:27:35 WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration:89 - 
+
+Using generated security password: 1b25e2ed-639e-458e-9ac7-586a7c77e988
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-06-26 00:27:37 INFO  o.s.s.w.DefaultSecurityFilterChain:55 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d277529, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d0f7ff1, org.springframework.security.web.context.SecurityContextPersistenceFilter@61e8670a, org.springframework.security.web.header.HeaderWriterFilter@66af35cf, org.springframework.security.web.authentication.logout.LogoutFilter@47aa8d86, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@19aad16, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42f7f41, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2641867b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c410fe2, org.springframework.security.web.session.SessionManagementFilter@18fd1ffa, org.springframework.security.web.access.ExceptionTranslationFilter@6918ccb4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@287495f6]
+2023-06-26 00:27:39 INFO  o.s.b.d.a.OptionalLiveReloadServer:59 - LiveReload server is running on port 35729
+2023-06-26 00:27:39 INFO  o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-26 00:27:39 INFO  c.b.MyblenderApplication:61 - Started MyblenderApplication in 28.589 seconds (JVM running for 31.04)
+2023-06-26 00:34:18 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-26 00:34:18 INFO  c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2023-06-26 00:34:18 INFO  c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
