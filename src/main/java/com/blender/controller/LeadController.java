@@ -8,8 +8,7 @@ import com.blender.service.LeadService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Lookup;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -19,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/api/rest")
@@ -102,40 +102,10 @@ public class LeadController {
         }
     }
 
-    @PostMapping("/reset-password/request")
-    public ResponseEntity<String> requestPasswordReset(@RequestParam("email") String email) {
-        LeadDto leadDto = leadService.findByEmail(email);
-        if (leadDto != null) {
-            String otp = generateOTP(); // Generate OTP for password reset
-            emailService.sendEmail(email, "Password Reset OTP", "Your OTP is: " + otp);
-            // Store the OTP in your database or cache for verification
-            // Return a success response or redirect to a page indicating that an OTP has been sent
-            return ResponseEntity.ok("OTP has been sent to your email");
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Email not found");
-        }
+
     }
 
-    private String generateOTP() {
-    }
 
-    @PostMapping("/reset-password/validate")
-    public ResponseEntity<String> validatePasswordResetOTP(@RequestParam("email") String email, @RequestParam("otp") String otp, @RequestParam("newPassword") String newPassword) {
-        // Verify the OTP against the stored OTP in your database or cache
-        boolean otpValidated = validateOTP(email, otp);
-        if (otpValidated) {
-            // Reset the password for the user with the provided email
-            leadService.resetPassword(email, newPassword);
-            // Return a success response or redirect to a password reset success page
-            return ResponseEntity.ok("Password reset successful");
-        } else {
-            // Return an error response or redirect to an error page
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid OTP");
-        }
-    }
 
-    private boolean validateOTP(String email, String otp) {
-    }
 
-}
 
