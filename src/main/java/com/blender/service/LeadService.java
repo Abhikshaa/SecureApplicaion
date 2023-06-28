@@ -15,6 +15,7 @@ public interface LeadService {
     LeadDto updateById(long id, LeadDto leadDto);
 
     void deleteById(long id);
+     public void resetPassword(String email, String newPassword);
 
 
 

@@ -91,12 +91,20 @@ public class LeadServiceImpl implements LeadService {
     }
     @Override
     public LeadDto findByEmail(String email, String password) {
-        Lead lead = leadRepository.findByEmailAndPassword(email,password);
-        if (lead != null ) {
+        Lead lead = leadRepository.findByEmailAndPassword(email, password);
+        if (lead != null) {
             return mapToDto(lead);
-        }else{
+        } else {
             return null;
         }
+    }
+         @Override
+         public void resetPassword(String email, String newPassword) {
+              Lead lead = leadRepository.findByEmail(email);
+              if (lead != null) {
+                   lead.setPassword(passwordEncoder.encode(newPassword));
+                   leadRepository.save(lead);
+              }
 
     }
 }

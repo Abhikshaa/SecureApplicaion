@@ -8,5 +8,7 @@ public interface LeadRepository extends JpaRepository<Lead,Long> {
 
      Lead findByEmailAndPassword(String email, String password);
 
-    // Lead findByEmail(String email);
+     Lead findByEmail(String email);
+
+     // Lead findByEmail(String email);
 }

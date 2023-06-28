@@ -16,24 +16,14 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 public class WebSecurity extends WebSecurityConfigurerAdapter {
 
-     public static String[] PUBLIC_URL={
-             "/api/**",
-             "/v3/api-docs",
-             "/v2/api-docs",
-             "/swagger-resources/**",
-             "/swagger-ui/**",
-             "/webjars/**"
 
-     };
 
      @Override
      protected void configure(HttpSecurity http) throws Exception {
           http.csrf().disable()
                   .authorizeRequests()
-                  .antMatchers().permitAll()
-                 // .antMatchers("/actuator/**").permitAll()
-                  .antMatchers(PUBLIC_URL).permitAll()
-                  .antMatchers(HttpMethod.GET).permitAll()
+                  .antMatchers("/api/**").permitAll()
+                  .antMatchers("/actuator/**").permitAll()
                   .anyRequest()
                   .authenticated()
                   .and()

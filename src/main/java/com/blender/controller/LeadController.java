@@ -3,6 +3,7 @@ package com.blender.controller;
 
 import com.blender.payload.LeadDto;
 
+import com.blender.service.EmailService;
 import com.blender.service.LeadService;
 
 import org.slf4j.Logger;
@@ -27,9 +28,12 @@ public class LeadController {
     private LeadService leadService;
     private PasswordEncoder passwordEncoder;
 
-    public LeadController(LeadService leadService, PasswordEncoder passwordEncoder) {
+    private EmailService emailService;
+
+    public LeadController(LeadService leadService, PasswordEncoder passwordEncoder, EmailService emailService) {
         this.leadService = leadService;
         this.passwordEncoder = passwordEncoder;
+        this.emailService = emailService;
     }
 
     Logger logger = LoggerFactory.getLogger(LeadController.class);
@@ -45,13 +49,13 @@ public class LeadController {
     }
 
 
-
     //http://localhost:8080/api/rest
     @PostMapping
     public ResponseEntity<?> createLead(@Valid @RequestBody LeadDto leadDto, BindingResult result) {
 
         String encode = passwordEncoder.encode(leadDto.getPassword());
         leadDto.setPassword(encode);
+        emailService.sendEmail(leadDto.getEmail(), "verification done", "text");
         LeadDto dto = leadService.createLead(leadDto);
         if (result.hasErrors()) {
             return new ResponseEntity<>(result.getFieldError().getDefaultMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -90,12 +94,48 @@ public class LeadController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LeadDto loginRequest) {
 
-            LeadDto leadDto = leadService.findByEmail(loginRequest.getEmail(), loginRequest.getPassword());
-            if (leadDto != null && leadDto.getPassword().equals(loginRequest.getPassword())) {
-                return ResponseEntity.ok(leadDto);
-            } else {
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
-            }
-
+        LeadDto leadDto = leadService.findByEmail(loginRequest.getEmail(), loginRequest.getPassword());
+        if (leadDto != null && leadDto.getPassword().equals(loginRequest.getPassword())) {
+            return ResponseEntity.ok(leadDto);
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
+        }
     }
+
+    @PostMapping("/reset-password/request")
+    public ResponseEntity<String> requestPasswordReset(@RequestParam("email") String email) {
+        LeadDto leadDto = leadService.findByEmail(email);
+        if (leadDto != null) {
+            String otp = generateOTP(); // Generate OTP for password reset
+            emailService.sendEmail(email, "Password Reset OTP", "Your OTP is: " + otp);
+            // Store the OTP in your database or cache for verification
+            // Return a success response or redirect to a page indicating that an OTP has been sent
+            return ResponseEntity.ok("OTP has been sent to your email");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Email not found");
+        }
+    }
+
+    private String generateOTP() {
+    }
+
+    @PostMapping("/reset-password/validate")
+    public ResponseEntity<String> validatePasswordResetOTP(@RequestParam("email") String email, @RequestParam("otp") String otp, @RequestParam("newPassword") String newPassword) {
+        // Verify the OTP against the stored OTP in your database or cache
+        boolean otpValidated = validateOTP(email, otp);
+        if (otpValidated) {
+            // Reset the password for the user with the provided email
+            leadService.resetPassword(email, newPassword);
+            // Return a success response or redirect to a password reset success page
+            return ResponseEntity.ok("Password reset successful");
+        } else {
+            // Return an error response or redirect to an error page
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid OTP");
+        }
+    }
+
+    private boolean validateOTP(String email, String otp) {
+    }
+
 }
+
