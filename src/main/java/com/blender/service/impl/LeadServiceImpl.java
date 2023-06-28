@@ -89,4 +89,14 @@ public class LeadServiceImpl implements LeadService {
         LeadDto dto = mapper.map(lead, LeadDto.class);
         return dto;
     }
+    @Override
+    public LeadDto findByEmail(String email, String password) {
+        Lead lead = leadRepository.findByEmailAndPassword(email,password);
+        if (lead != null ) {
+            return mapToDto(lead);
+        }else{
+            return null;
+        }
+
+    }
 }

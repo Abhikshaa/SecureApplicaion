@@ -15,4 +15,8 @@ public interface LeadService {
     LeadDto updateById(long id, LeadDto leadDto);
 
     void deleteById(long id);
+
+
+
+     LeadDto findByEmail(String email, String password);
 }
